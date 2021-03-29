@@ -1,0 +1,25 @@
+<?php
+	include "reader.php";
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .aclevel{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="reader.php" enctype="multipart/form-data">
+    <input name="max_size" type="hidden" value="5000000">
+    <input id="file" class="file" name="file[]" type="file" multiple required>
+    <br>
+    <input id="aclevel" class="aclevel" name="aclevel" type="number" step="0.01" min="0" max="100" placeholder="Уровень доступности, %">
+    <input id="time" class="time" name="time" type="number" step="0.01" min="0" placeholder="Время ответа, мс">
+    <br>
+    <input id="button" class="button" name="but" type="submit" value="Download">
+</form>
+</body>
+</html>
